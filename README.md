@@ -1,6 +1,6 @@
 ## Frames Extractor
 
-Command line application for frames extracting. Provides FPS configuration, value < 1 is allowed.
+Command line application for frames extracting. Provides FPS configuration.
 
 ### Dependencies
 * python 3
@@ -19,4 +19,5 @@ Clone the repo
 
 `--fps` is float. i.e
 `python frames_extractor.py video0.mp4 ../frames/ --fps=0.5` save frame each 2 seconds.
+`python frames_extractor.py video0.mp4 ../frames/ --fps=2` save frame each 0.5 seconds.
 
