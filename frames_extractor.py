@@ -8,16 +8,17 @@ def _exctract_frames(videofile, destination_dir, fps=1):
     start = 0
     step = 1000 / fps
     cap = cv2.VideoCapture(videofile)
-    success, image = cap.read()
+
     if not cap.isOpened():
         print("Can't open", videofile)
-    i = 0
+
+    frame_count = 0
     success = True
     while success:
         cap.set(cv2.CAP_PROP_POS_MSEC, start)
         success, image = cap.read()
-        cv2.imwrite("{}frame_{}.jpg".format(destination_dir, i), image)
-        i += 1
+        cv2.imwrite("{}frame_{}.jpg".format(destination_dir, frame_count), image)
+        frame_count += 1
         start += step
 
 
